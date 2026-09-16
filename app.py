@@ -241,7 +241,7 @@ def get_sheet():
 
 def append_order(delivery_date, product, packets, kg, notes):
     sheet = get_sheet()
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    timestamp = datetime.now().strftime("%d/%m/%Y - %H:%M:%S")
     all_rows = sheet.get_all_values()
     data_rows = [r for r in all_rows[2:] if any(cell.strip() for cell in r)]
     next_sr = len(data_rows) + 1
